@@ -51,6 +51,7 @@ jobs:
             matrix:
                 ver:
                     - 'latest'
+                    - '1.21'
                     - '1.19.2'
                     - '1.19.1'
                     - '1.19'
@@ -62,10 +63,10 @@ jobs:
 
         steps:
             - name: Setup java
-              uses: actions/setup-java@v2
+              uses: actions/setup-java@v4
               with:
-                  distribution: "adopt"
-                  java-version: "18"
+                  distribution: "microsoft"
+                  java-version: "21"
 
             - name: Download BuildTools.jar
               run: wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar

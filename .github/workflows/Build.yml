@@ -50,7 +50,7 @@ jobs:
         strategy:
             matrix:
                 ver:
-                    - '1.21'
+                    - '1.21.1'
         env:
             ver: ${{ matrix.ver }}
 

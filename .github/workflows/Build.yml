@@ -3,7 +3,7 @@
 
 name: Build Spigot Jar
 env:
-    latest: '1.21'
+    latest: '1.21.1'
 
 on:
     workflow_dispatch:

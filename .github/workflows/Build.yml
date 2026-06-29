@@ -3,7 +3,7 @@
 
 name: Build Spigot Jar
 env:
-    latest: '1.21.8'
+    latest: '26.2'
 
 on:
     workflow_dispatch:
@@ -50,7 +50,7 @@ jobs:
         strategy:
             matrix:
                 ver:
-                    - '1.21.7'
+                    - '26.2'
         env:
             ver: ${{ matrix.ver }}
 
@@ -59,7 +59,7 @@ jobs:
               uses: actions/setup-java@v4
               with:
                   distribution: "microsoft"
-                  java-version: "21"
+                  java-version: "25"
 
             - name: Download BuildTools.jar
               run: wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
